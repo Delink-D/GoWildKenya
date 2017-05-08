@@ -1,0 +1,30 @@
+<!-- hiden latitude and Longitude values -->
+<p id="lat">$place.getLat()</p>
+<p id="lng">$place.getLng()</p>
+
+<!-- Place Name -->
+<h3 style="padding-left: 2%;">$place.getName()</h3><hr id="place-hr">
+<!-- place map location -->
+<div id="placeLocation">
+	
+</div>
+
+<div>
+	<div class="box box-place-content">
+		<h3>About $place.getName()</h3>
+		<hr>
+		<p class="place-content">
+			$place.getDescription()
+		</p>
+	</div>
+	<div class="box box-place-content">
+		<div class="place-btns">
+			<button type="button" class="btn btn-warning">Book Now</button>
+			<button type="button" class="btn btn-info">Get A Tour Company</button>
+		</div>
+	</div>
+	<div class="box box-place-content place-imgs">
+		<img src="$place.getImage1()">
+		<img src="$place.getImage2()">
+	</div>
+</div>

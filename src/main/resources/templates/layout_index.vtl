@@ -4,31 +4,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Go! Wild || Kenya</title>
 		<!-- styles -->
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-			<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 			<link rel="stylesheet" type="text/css" href="/styles/styles.css">
 
 			<!-- scripts -->
 			<script type="text/javascript" src="/js/main.js"></script>
-
-			<!-- Google maps api code -->
-			<script>
-				function initMap() {
-					var lat = parseFloat($("#lat").text());
-					var lng = parseFloat($("#lng").text());
-
-					var uluru = {lat: lat, lng: lng};
-					var map = new google.maps.Map(document.getElementById('placeLocation'), {
-						zoom: 12,
-						center: uluru
-					});
-					var marker = new google.maps.Marker({
-						position: uluru,
-						map: map
-					});
-				}
-			</script>
 	</head>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 		<!-- Navigation -->
@@ -46,19 +26,19 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav nabar-right">
+                    <ul class="nav navbar-nav">
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li>
-                            <a class="page-scroll" href="/#page-top">Home</a>
+                            <a class="page-scroll" href="#page-top">Home</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/#about">About</a>
+                            <a class="page-scroll" href="#about">About</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/#services">Services</a>
+                            <a class="page-scroll" href="#services">Services</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/#contact">Contact</a>
+                            <a class="page-scroll" href="#contact">Contact</a>
                         </li>
                     </ul>
 
@@ -82,15 +62,11 @@
         </nav>
 		
 		<!-- Conent from pages -->
-		<div class="container mycontainer">
-			#parse($template)
-		</div>
+		#parse($template)
 
 	<!-- footer goes here -->
 	<footer>
-		<div class="container text-center">
-            <p>Copyright &copy; Go Wild Kenya</p>
-        </div>
+        
 		<!-- jQuery -->
         <script src="/js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
@@ -98,8 +74,6 @@
         <!-- Scrolling Nav JavaScript -->
         <script src="/js/jquery.easing.min.js"></script>
         <script src="/js/scrolling-nav.js"></script>
-        <!-- Google maps script -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoV_rdG5bZxwm2zpux-xoJgI0bN0y6zOE&callback=initMap"></script>
 	</footer>
 	</body>
 </html>

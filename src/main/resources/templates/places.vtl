@@ -1,0 +1,17 @@
+<h1 class="header">Go Wild Kenya</h1>
+<div class="box box-content group">
+	<h2 class="list-name">$list.getName()</h2>
+
+	<div id="container">
+		#foreach($place in $list.getPlaces())
+			<a href="/places/place/$place.getId()">
+				<div class="col-lg-4 col-md-4 myitem">
+					<img src="$place.getImage1()" alt="">
+					<p id="text">
+						$place.getName()
+					</p>
+				</div>
+			</a>
+		#end	    
+	</div>
+</div>

@@ -1,0 +1,42 @@
+<div class="body-main">
+	<div class="box two-box">
+		<form action="/admin/add-admin" method="post">
+			<fieldset class="form-group">
+				<label for="adminname">Admin Name</label>
+				<input type="text" class="form-control" id="adminname" name="adminname" placeholder="Add Admin User Name">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="adminemail">Admin Email</label>
+				<input type="text" class="form-control" id="adminemail" name="adminemail" placeholder="Add Admin User Email">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="adminpass">Admin Password</label>
+				<input type="password" class="form-control" id="adminpass" name="adminpass" placeholder="Add Admin User Password">
+			</fieldset>
+			<fieldset class="form-group">
+				<input type="submit" class="btn btn-success" value="Add Admin">
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="box two-box">
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>NO</th>
+					<th>User Name</th>
+					<th>User Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				#foreach($admin in $admins)
+					<tr>
+						<td>$velocityCount</td>
+						<td>$admin.getName()</td>
+						<td>$admin.getEmail()</td>
+					</tr>
+				#end
+			</tbody>
+		</table>
+	</div>
+</div>

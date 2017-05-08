@@ -1,0 +1,73 @@
+<div class="body-main">
+	<div class="box two-box">
+		<form action="/admin/add-place" method="post">
+			<fieldset class="form-group">
+				<label for="listname">List Name</label>
+				<select class="form-control" name="list">
+					#foreach($list in $lists)
+						<option value="$list.getId()">$list.getName()</option>
+					#end
+				</select>
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="place">Place Name</label>
+				<input type="text" name="placename" id="place" class="form-control" placeholder="Type in Place Name">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="cost">Cost Of Visit</label>
+				<input type="number" name="cost" id="cost" class="form-control" placeholder="Cost of visit per Day">
+			</fieldset>
+			<fieldset class="form-group col-lg-6 col-md-6">
+				<label for="mylat">Latitude of place</label>
+				<input type="text" name="lat" id="mylat" class="form-control" placeholder="Latitude of Place">
+			</fieldset>
+			<fieldset class="form-group col-lg-6 col-md-6">
+				<label for="mylng">Longitude of Place</label>
+				<input type="text" name="lng" id="mylng" class="form-control" placeholder="Longitude of Place">
+			</fieldset>
+			<div class="clearfix"></div>
+			<fieldset class="form-group">
+				<label for="img1">Image I</label>
+				<input type="text" name="img1" id="img1" class="form-control" placeholder="Place a url of Image">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="img2">Image II</label>
+				<input type="text" name="img2" id="img2" class="form-control" placeholder="Place a url of Image">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="desc">Place Description</label>
+				<textarea name="desc" id="desc" class="form-control" placeholder="More About This place..."></textarea>
+			</fieldset>
+			<fieldset class="form-group">
+				<input type="submit" class="btn btn-success" value="Add Category">
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="box two-box">
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>NO</th>
+					<th>List Name</th>
+					<th>Place Name</th>
+					<th>Cost Visit</th>
+					<th>Latitude</th>
+					<th>Longitude</th>
+				</tr>
+			</thead>
+			<tbody>
+				#foreach($place in $places)
+					<tr>
+						<td>$velocityCount</td>
+						<td>$place.getListName().getName()</td>
+						<td>$place.getName()</td>
+						<td>$place.getCostofVisit()</td>
+						<td>$place.getLat()</td>
+						<td>$place.getLng()</td>
+					</tr>
+				#end
+			</tbody>
+		</table>
+	</div>
+</div>
