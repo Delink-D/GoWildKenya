@@ -1,1 +1,1 @@
-web: ./build/install/todo/bin/GoWildKenya
+web: ./build/install/GoWildKenya/bin/GoWildKenya
